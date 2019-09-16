@@ -3,34 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducers/index'
 import NewComponent from './components/newComponent'
+import { CheckIn, Disaster, Partner, Person } from './containers/Exports'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import thunk from 'redux-thunk';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(rootReducer)
-
-const link = {
-    width: '100px',
-    padding: '12px',
-    margin: '0 6px 6px',
-    background: 'blue',
-    textDecoration: 'none',
-    color: 'white',
-  }
-
-  const Navbar = () =>
-  <div>
-    <NavLink to="/new" exact style={link} activeStyle={{background: 'darkblue'}}>Home</NavLink>
-  </div>;
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
         <Provider store={store}>
             <Router>
-                <Navbar />
                 <Route exact path="/" component={App}/>
-                <Route exact path="/new" component={NewComponent}/>
+                <Route exact path="/checkin" component={CheckIn}/>
+                <Route exact path="/person" component={Partner}/>
+                <Route exact path="/disaster" component={Disaster}/>
+                <Route exact path="/partner" component={Person}/>
             </Router>
         </Provider>,
         document.getElementById('root')

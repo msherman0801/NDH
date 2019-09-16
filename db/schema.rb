@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_12_144012) do
+ActiveRecord::Schema.define(version: 2019_09_16_203459) do
 
-  create_table "persons", force: :cascade do |t|
+  create_table "people", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "location"
     t.string "geolocation"
-    t.string "family_member_one"
-    t.string "family_member_two"
-    t.string "family_member_three"
-    t.string "family_member_four"
+    t.string "family_member_1"
+    t.string "family_member_2"
+    t.string "family_member_3"
+    t.string "family_member_4"
   end
 
   create_table "users", force: :cascade do |t|
