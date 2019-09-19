@@ -8,18 +8,28 @@ class CheckInForm extends React.Component {
         form: {
             first_name: '',
             last_name: '',
-            location: '',
-        }
+            location: ''
+        },
+        button: <button onClick={(e) => this.addInput(e)}>Add Family Member</button>
+
     }
 
     handleOnChange = e => {
-        console.log(this.state)
         this.setState({ ...this.state, form: { ...this.state.form, [e.target.id]: e.target.value } })
     }
 
     addInput(e) {
         e.preventDefault();
-        this.setState({ familyMemberCount: this.state.familyMemberCount + 1 })
+        this.setState({ 
+            familyMemberCount: (() => {
+                if (this.state.familyMemberCount < 5) {
+                    return this.state.familyMemberCount + 1
+                } else {
+                    this.setState({button: <button onClick={(e) => this.addInput(e)} disabled>Add Family Member</button>})
+                    return 5
+                }
+                })()
+            })
     }
 
     handleOnSubmit = e => {
@@ -42,7 +52,7 @@ class CheckInForm extends React.Component {
                     <InputField id="last_name" type="text" placeholder="Last Name" onChange={this.handleOnChange} />
                     <InputField id="location" type="text" placeholder="Location" onChange={this.handleOnChange} />
                     {inputFields}
-                    <button onClick={(e) => this.addInput(e)}>Add Family Member</button>
+                    {this.state.button}
                     <InputField id="submit" type="submit" placeholder="Submit" />
                 </form>
             </div>

@@ -31,6 +31,8 @@ gem 'rest-client'
 gem 'json'
 # DOTENV to maintain security with API keys
 gem 'dotenv-rails'
+# Serializing objects for API usage
+gem 'active_model_serializers'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

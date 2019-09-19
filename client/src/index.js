@@ -5,8 +5,7 @@ import App from './App';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducers/index'
-import NewComponent from './components/newComponent'
-import { CheckIn, Disaster, Partner, Person } from './containers/Exports'
+import { CheckIn, Disaster, Partner, Persons } from './containers/Exports'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import * as serviceWorker from './serviceWorker';
@@ -18,9 +17,9 @@ ReactDOM.render(
             <Router>
                 <Route exact path="/" component={App}/>
                 <Route exact path="/checkin" component={CheckIn}/>
-                <Route exact path="/person" component={Partner}/>
+                <Route exact path="/person" component={Persons}/>
                 <Route exact path="/disaster" component={Disaster}/>
-                <Route exact path="/partner" component={Person}/>
+                <Route exact path="/partner" component={Partner}/>
             </Router>
         </Provider>,
         document.getElementById('root')

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_16_203459) do
+ActiveRecord::Schema.define(version: 2019_09_17_161621) do
 
   create_table "people", force: :cascade do |t|
     t.string "first_name"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 2019_09_16_203459) do
     t.string "family_member_2"
     t.string "family_member_3"
     t.string "family_member_4"
+  end
+
+  create_table "trackers", force: :cascade do |t|
+    t.string "ip"
+    t.string "continent_name"
+    t.string "country_name"
+    t.string "region_name"
+    t.string "city"
+    t.string "zip"
+    t.string "latitude"
+    t.string "longitude"
+    t.integer "person_id"
   end
 
   create_table "users", force: :cascade do |t|
