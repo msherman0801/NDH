@@ -1,0 +1,131 @@
+.centered-logo {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.main-grid {
+	margin: 35px 0 0 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	width: 100%;
+}
+
+.main-grid li {
+	position: relative;
+	float: left;
+    overflow: hidden;
+    height: 50vh;
+	width: 16.6666667%; /* Fallback */
+	width: -webkit-calc(100% / 2);
+	width: calc(100% / 2);
+}
+
+.main-grid li a,
+.main-grid li a img {
+	display: block;
+	width: 1000px;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+
+/* Flexbox is used for centering the heading */
+.main-grid li a div {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	background: rgba(71,163,218,0.2);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+
+.main-grid li a:hover div {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-grid li a div h3 {
+	width: 100%;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	letter-spacing: 2px;
+	padding: 0 10px;
+}
+
+/* Example for media query: change number of items per row */
+
+@media screen and (max-width: 1190px) {
+	.main-grid li {
+		width: 20%; /* Fallback */
+		width: -webkit-calc(100% / 2);
+		width: calc(100% / 2);
+	}
+}
+
+@media screen and (max-width: 945px) {
+	.main-grid li {
+		width: 25%; /* Fallback */
+		width: -webkit-calc(100% / 1);
+		width: calc(100% / 1);
+	}
+	.centered-logo {
+		top: 10%;
+		width: 40vh;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.main-grid li {
+		min-width: 392px;
+		width: 33.3333333%; /* Fallback */
+		width: -webkit-calc(100% / 1);
+		width: calc(100% / 1);
+	}
+	.main-grid li a div {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.main-grid li {
+		min-width: 392px;
+		width: 33.3333333%; /* Fallback */
+		width: -webkit-calc(100% / 1);
+		width: calc(100% / 1);
+	}
+	.main-grid li a div {
+		opacity: 1;
+	}
+}
+
+/* @media screen and (max-width: 400px) {
+	.main-grid li {
+		width: 50%;
+		width: -webkit-calc(100% / 1);
+		width: calc(100% / 1);
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.main-grid li {
+		width: 100%;
+	}
+} */

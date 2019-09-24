@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.string :api_key, default: ''
+      t.string :organization
     end
   end
 end

@@ -1,4 +1,4 @@
-export const gettingCityIds = (formData) => {
+export const getCityIds = (formData) => {
     return (dispatch) => {
         dispatch({type: 'GETTING_CITY_IDS'})
         return (

@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import DisasterForm from '../components/disaster/DisasterForm'
 import CityCard from '../components/disaster/CityCard'
 import DisasterBox from '../components/disaster/DisasterBox'
-
-import { gettingCityIds } from '../actions/gettingCityIds'
+import { getCityIds } from '../actions/getCityIds'
 import { getCityData } from '../actions/getCityData'
 import { connect } from 'react-redux'
 
 class Disaster extends Component {
 
+    
 
     renderModule() {
         if (this.props.cityData) {
@@ -16,7 +16,7 @@ class Disaster extends Component {
         } else if (this.props.cities) {
             return this.props.cities.map(city => <CityCard dispatch={this.props.getCityData} city={city} />)
         } else {
-            return <DisasterForm dispatch={this.props.gettingCityIds}/>
+            return <DisasterForm dispatch={this.props.getCityIds}/>
         }
     }
 
@@ -38,4 +38,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { gettingCityIds, getCityData })(Disaster)
+export default connect(mapStateToProps, { getCityIds, getCityData })(Disaster)

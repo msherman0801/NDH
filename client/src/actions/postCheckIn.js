@@ -1,4 +1,4 @@
-export const postingCheckIn = (formData) => {
+export const postCheckIn = (formData) => {
     return (dispatch) => {
         dispatch({type: 'POSTING_CHECK_IN'})
         return (
@@ -6,7 +6,7 @@ export const postingCheckIn = (formData) => {
             .then(res => res.json())
             .then(ip => {
                 formData.geolocation = ip.ip
-                fetch('http://localhost:4000/checkin', {
+                fetch('http://localhost:4000/api/checkin', {
                     mode: 'cors',
                     method: "POST",
                     headers: {

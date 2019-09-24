@@ -1,0 +1,34 @@
+@import 'forms.css';
+
+/* Global Classes */
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Logo */
+.top-centered-logo {
+    position: fixed;
+    z-index: 10;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.home-link {
+    position: fixed;
+    z-index: 10;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.home-link:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Check In Container */

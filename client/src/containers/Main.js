@@ -1,16 +1,26 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux' 
 import { NavLink } from 'react-router-dom';
+import '../styles/main.css'
 
 class Main extends Component {
 
     render() {
+
         return (
             <div>
-                <NavLink to="/checkin" exact style={link} activeStyle={{background: 'darkblue'}}>Check In</NavLink>
-                <NavLink to="/person" exact style={link} activeStyle={{background: 'darkblue'}}>Check Status of Person</NavLink>
-                <NavLink to="/disaster" exact style={link} activeStyle={{background: 'darkblue'}}>Check Status of Disaster</NavLink>
-                <NavLink to="/partner" exact style={link} activeStyle={{background: 'darkblue'}}>Become a Check In Partner</NavLink>
+                <img
+                    src="logo-black.png"
+                    width="500"
+                    className="centered-logo"
+                    alt="Nation Disaster Hub Logo"
+                />
+                <ul class="main-grid">
+                    <li><NavLink to="/checkin"><img src="checkin.jpg" /><div><h3>Check In</h3></div></NavLink></li>
+                    <li><a href="#"><img src="location.jpg" /><div><h3>Find a Person</h3></div></a></li>
+                    <li><a href="#"><img src="weather.jpg" /><div><h3>Disaster Status</h3></div></a></li>
+                    <li><a href="#"><img src="partners.jpg" /><div><h3>Become a Partner</h3></div></a></li>
+                </ul>
             </div>
         )
     }

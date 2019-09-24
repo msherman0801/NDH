@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import CheckInForm from '../components/checkIn/CheckInForm'
 import CheckInCard from '../components/checkIn/CheckInCard'
-import { postingCheckIn } from '../actions/postingCheckIn';
+import { NavLink } from 'react-router-dom';
+import { postCheckIn } from '../actions/postCheckIn';
+import '../styles/containers.css'
+
 
 class CheckIn extends Component {
 
@@ -12,14 +15,41 @@ class CheckIn extends Component {
             return <CheckInCard person={this.props.person} />
         } else {
             console.log(this.props.person)
-            return <CheckInForm dispatch={this.props.postingCheckIn} />
+            return <CheckInForm dispatch={this.props.postCheckIn} />
         }
     }
 
     render() {
+
+        const background = {
+            height: '100vh',
+            width: '100%',
+            opacity: '1',
+            backgroundImage: `url(checkin.jpg)`,
+            backgroundSize: 'cover'
+        }
+
+        const overlay = {
+            height: '100vh',
+            width: '100%',
+            backgroundColor: 'rgba(0,0,0,0.5)'
+        }
+
         return (
-            <div>
-                {this.renderModule()}
+            <div style={background}>
+
+                <img
+                    src="logo.png"
+                    width="500"
+                    className="top-centered-logo"
+                    alt="Nation Disaster Hub Logo"
+                />
+                <NavLink to="/" className="home-link">HOME</NavLink>
+
+                <div style={overlay}>
+                    {this.renderModule()}
+                </div>
+
             </div>
         )
     }
@@ -32,4 +62,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { postingCheckIn })(CheckIn)
+export default connect(mapStateToProps, { postCheckIn })(CheckIn)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_17_161621) do
+ActiveRecord::Schema.define(version: 2019_09_20_203412) do
 
   create_table "people", force: :cascade do |t|
     t.string "first_name"
@@ -41,7 +41,8 @@ ActiveRecord::Schema.define(version: 2019_09_17_161621) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.string "api_key", default: ""
+    t.string "organization"
+    t.string "api_key"
   end
 
 end

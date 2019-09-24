@@ -3,12 +3,30 @@ require 'rest-client'
 
 class PersonsController < ActionController::API
 
-    def checkin
+    before_action :authenticate, only: [:api_check_in]
+
+    def token
+        request.headers['api-key']
+    end
+
+    def check_in
         params['response'] = JSON.parse(RestClient::Request.execute(
             method: "GET",
             url: "http://api.ipstack.com/#{params['geolocation']}?access_key=#{ENV["IP_STACK_KEY"]}"
         ))
         tracker = Tracker.create(tracker_params)
+        person = Person.create(person_params)
+        person.tracker = tracker
+        render json: person
+    end
+
+    def api_check_in
+        binding.pry
+        # params['response'] = JSON.parse(RestClient::Request.execute(
+        #     method: "GET",
+        #     url: "http://api.ipstack.com/#{params['geolocation']}?access_key=#{ENV["IP_STACK_KEY"]}"
+        # ))
+        # tracker = Tracker.create(tracker_params)
         person = Person.create(person_params)
         person.tracker = tracker
         render json: person
@@ -20,6 +38,22 @@ class PersonsController < ActionController::API
         render json: person
     end
 
+    protected
+  
+    # Authenticate the user with token based authentication
+    def authenticate
+        authenticate_token || render_unauthorized
+    end
+  
+    def authenticate_token
+        permitted_user = User.find_by(api_key: token)
+        true if permitted_user
+    end
+  
+    def render_unauthorized(realm = "Application")
+        self.headers["WWW-Authenticate"] = %(Token realm="#{realm}")
+        render json: 'Bad credentials', status: :unauthorized
+    end
 
     private
 

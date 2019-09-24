@@ -7,7 +7,7 @@ function App() {
 
   return (
       <div className="App">
-      <NavLink to="/new" activeStyle={{background: 'darkblue'}}>Home</NavLink>
+      {/*<NavLink to="/new" activeStyle={{background: 'darkblue'}}>Home</NavLink>*/}
         <Main />
       </div>
   );
