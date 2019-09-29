@@ -18,12 +18,13 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleOnSubmit}>
-                    <input id="username" type="text" placeholder="Username" onChange={e => this.handleOnChange(e)} />
-                    <input id="password" type="text" placeholder="Password" onChange={e => this.handleOnChange(e)} />
-                    <button type="submit">Login</button>
+            <div className="login-container">
+                <form className="sm-form" onSubmit={this.handleOnSubmit}>
+                    <input className="sm-form-input" id="username" type="text" placeholder="Username" onChange={e => this.handleOnChange(e)} />
+                    <input className="sm-form-input" id="password" type="text" placeholder="Password" onChange={e => this.handleOnChange(e)} />
+                    <button className="sm-form-button" type="submit">Login</button>
                 </form>  
+                <button id="login-button" className="sm-form-button" onClick={() => this.props.submit()}>Become a Partner</button>
             </div>
         )
     }

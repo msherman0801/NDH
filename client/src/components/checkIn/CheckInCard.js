@@ -1,15 +1,17 @@
 import React from 'react'
 
 const hrStyle = {
-    width: '25%'
+    width: '25%',
+    color: 'white',
+    marginTop: '1em;'
   };
 
 const CheckInCard = props => 
-    <div>
+    <div className="centered checkin-card">
         <center>
-            <h1>Thank you for checking in, {props.person.first_name}.</h1>
+            <h3>Thank you for checking in, {props.person.first_name}.</h3>
             <h3>We are relieved to hear you are safe. Checking in will help your loved ones find that same relief. </h3>
-            <hr />
+            <hr style={hrStyle} />
 
             <h5>What your loved ones will be able to see:</h5>
             <hr style={hrStyle} />

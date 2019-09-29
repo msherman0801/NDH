@@ -19,10 +19,10 @@ class DisasterForm extends React.Component {
     }
     render() {
         return (
-            <div>
-                <form onSubmit={(e) => this.handleOnSubmit(e)}>
-                    <input id="city" type="text" placeholder="City" onChange={(e) => this.handleOnChange(e)} />
-                    <button type="submit">Find Cities</button>
+            <div className="centered">
+                <form className="sm-form" onSubmit={(e) => this.handleOnSubmit(e)}>
+                    <input className="sm-form-input" id="city" type="text" placeholder="City" onChange={(e) => this.handleOnChange(e)} />
+                    <button className="sm-form-button" type="submit">Find Cities</button>
                 </form>
             </div>
         )

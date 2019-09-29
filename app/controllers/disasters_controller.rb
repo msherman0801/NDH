@@ -13,12 +13,10 @@ class DisastersController < ActionController::API
     end
 
     def get_city_data
-        puts params
         response = JSON.parse(RestClient::Request.execute(
             method: "GET",
             url: "http://dataservice.accuweather.com/forecasts/v1/daily/5day/#{params['city_id']}?apikey=#{ENV['ACCUWEATHER_KEY']}"
         ))
-        
         render json: response
     end
 

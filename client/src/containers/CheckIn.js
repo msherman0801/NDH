@@ -44,8 +44,13 @@ class CheckIn extends Component {
                     className="top-centered-logo"
                     alt="Nation Disaster Hub Logo"
                 />
-                <NavLink to="/" className="home-link">HOME</NavLink>
-
+                <div className="back-arrow-box">
+                    <NavLink to="/" className="home-link"><img 
+                        
+                        width="30"
+                        src="back-arrow.png" 
+                    /> Back Home </NavLink>
+                </div>
                 <div style={overlay}>
                     {this.renderModule()}
                 </div>

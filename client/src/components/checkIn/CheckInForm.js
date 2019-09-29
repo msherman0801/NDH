@@ -43,7 +43,7 @@ class CheckInForm extends React.Component {
         const inputFields = []
 
         for (var i = 1; i < this.state.familyMemberCount; i += 1) {
-            inputFields.push(<InputField className="sm-form-input" id={"family_member_"+i} type="text" placeholder={"Family Member " + i} onChange={e => this.handleOnChange(e)}/>);
+            inputFields.push(<InputField className="sm-form-input" id={"family_member_"+i} type="text" placeholder={"Family Member First Name #" + i} onChange={e => this.handleOnChange(e)}/>);
         };
 
         return (
@@ -51,7 +51,7 @@ class CheckInForm extends React.Component {
                 <form className="sm-form" onSubmit={this.handleOnSubmit}>
                     <InputField className="sm-form-input" id="first_name" type="text" placeholder="First Name" onChange={this.handleOnChange} />
                     <InputField className="sm-form-input" id="last_name" type="text" placeholder="Last Name" onChange={this.handleOnChange} />
-                    <InputField className="sm-form-input" id="location" type="text" placeholder="Location" onChange={this.handleOnChange} />
+                    <InputField className="sm-form-input" id="location" type="text" placeholder="City of Residency" onChange={this.handleOnChange} />
                     {inputFields}
                     {this.state.button}
                     <InputField id="submit" className="sm-form-button" type="submit" />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux' 
 import { NavLink } from 'react-router-dom';
-import '../styles/main.css'
+import '../styles/home.css'
 
 class Main extends Component {
 
@@ -16,24 +16,15 @@ class Main extends Component {
                     alt="Nation Disaster Hub Logo"
                 />
                 <ul class="main-grid">
-                    <li><NavLink to="/checkin"><img src="checkin.jpg" /><div><h3>Check In</h3></div></NavLink></li>
-                    <li><a href="#"><img src="location.jpg" /><div><h3>Find a Person</h3></div></a></li>
-                    <li><a href="#"><img src="weather.jpg" /><div><h3>Disaster Status</h3></div></a></li>
-                    <li><a href="#"><img src="partners.jpg" /><div><h3>Become a Partner</h3></div></a></li>
+                    <li className="tl"><NavLink to="/checkin"><img src="checkin.jpg" /><div><h3>Check In</h3></div></NavLink></li>
+                    <li className="tr"><NavLink to="/person"><img src="location.jpg" /><div><h3>Find a Person</h3></div></NavLink></li>
+                    <li className="bl"><NavLink to="/disaster"><img src="weather.jpg" /><div><h3>Disaster Status</h3></div></NavLink></li>
+                    <li className="br"><NavLink to="/partner"><img src="partners.jpg" /><div><h3>Become a Partner</h3></div></NavLink></li>
                 </ul>
             </div>
         )
     }
 
-}
-
-const link = {
-    width: '100px',
-    padding: '12px',
-    margin: '0 6px 6px',
-    background: 'blue',
-    textDecoration: 'none',
-    color: 'white',
 }
 
 export default connect()(Main)

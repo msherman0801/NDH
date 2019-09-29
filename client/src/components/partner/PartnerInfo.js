@@ -8,11 +8,11 @@ class PartnerInfo extends React.Component {
 
     render() {
         return (
-            <div>
-                
+            <div className="right">
+                test
             </div>
         )
     }
 }
 
-export default parterInfo
+export default PartnerInfo

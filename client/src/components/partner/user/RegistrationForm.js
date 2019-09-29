@@ -19,7 +19,7 @@ class RegistrationForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="registration-container">
                 <form onSubmit={this.handleOnSubmit}>
                     <input id="username" type="text" placeholder="Username" onChange={e => this.handleOnChange(e)} />
                     <input id="password" type="text" placeholder="Password" onChange={e => this.handleOnChange(e)} />

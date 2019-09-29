@@ -6,7 +6,7 @@ export const postCheckIn = (formData) => {
             .then(res => res.json())
             .then(ip => {
                 formData.geolocation = ip.ip
-                fetch('http://localhost:4000/api/checkin', {
+                fetch('http://localhost:4000/checkin', {
                     mode: 'cors',
                     method: "POST",
                     headers: {

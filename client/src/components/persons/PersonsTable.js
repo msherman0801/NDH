@@ -1,6 +1,5 @@
 import React from 'react'
 import Row from './Row'
-import './styling.css'
 
 class PersonsTable extends React.Component {
 
@@ -10,10 +9,10 @@ class PersonsTable extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>My Sweet Table</h2>
-                <table className="table">
+            <div className="person-box">
+                <table className="person-table">
                     <tr>
+                        <th></th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Hometown</th>
