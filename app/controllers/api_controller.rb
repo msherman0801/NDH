@@ -22,7 +22,6 @@ class ApiController < ActionController::API
 
     def persons
         person = Person.where(person_params)
-        puts person
         render json: person
     end
 
