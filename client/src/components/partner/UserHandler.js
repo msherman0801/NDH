@@ -1,6 +1,7 @@
 import React from 'react'
 import LoginForm from './user/LoginForm'
 import RegistrationForm from './user/RegistrationForm'
+import UserDash from './user/UserDash'
 
 class UserHandler extends React.Component {
 
@@ -9,25 +10,29 @@ class UserHandler extends React.Component {
     }
 
     renderModule() {
-        if (this.state.currentUser) {
-            return <LoginForm dispatch={this.props.loginDispatch} submit={() => this.changeModule()} />
+        if (this.props.user) {
+            return <UserDash user={this.props.user.user} />
+        } else if (this.state.currentUser) {
+            return <LoginForm dispatch={this.props.loginDispatch} submit={this.changeModule} />
         } else {
-            return <RegistrationForm dispatch={this.props.registrationDispatch} />
+            return <RegistrationForm dispatch={this.props.registrationDispatch} submit={this.changeModule} />
         }
     }
 
-    changeModule() {
-        
+    changeModule = (value) => {
+        if (value === 'false') {
+            this.setState({ currentUser: false })
+        } else {
+            this.setState({ currentUser: true })
+        }
     }
 
 
     render() {
         return (
-            <div className="left" >
+            <div className="left">
                 {this.renderModule()}
-
             </div>
-
         )
     }
 }

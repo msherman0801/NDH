@@ -10,13 +10,16 @@ import '../styles/containers.css'
 
 class Partner extends Component {
 
-    renderModule() {
-        if (this.props.user === null) {
-            return <UserHandler loginDispatch={this.props.postLogin} registrationDispatch={this.props.postRegistration} />
-        } else {
-            return <UserDash dispatch={this.props.user} />
-        }
-    }
+    // renderModule() {
+    //     if (this.props.user) {
+    //         console.log(this.props.user)
+    //         return <UserDash dispatch={this.props.user} />
+            
+    //     } else {
+    //         console.log(this.props.user)
+    //         return <UserHandler loginDispatch={this.props.postLogin} registrationDispatch={this.props.postRegistration} />
+    //     }
+    // }
 
     render() {
 
@@ -50,8 +53,10 @@ class Partner extends Component {
                 </div>
                 <div style={overlay} className="partner-container">
                     <div className="partner-box">
-                        {this.renderModule()}
+                        <div class="testing">
+                        <UserHandler loginDispatch={this.props.postLogin} registrationDispatch={this.props.postRegistration} user={this.props.user}/>
                         <PartnerInfo />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
                     <input className="sm-form-input" id="password" type="text" placeholder="Password" onChange={e => this.handleOnChange(e)} />
                     <button className="sm-form-button" type="submit">Login</button>
                 </form>  
-                <button id="login-button" className="sm-form-button" onClick={() => this.props.submit()}>Become a Partner</button>
+                <button id="login-button" className="sm-form-button" onClick={() => this.props.submit('false')}>Switch to Registration</button>
             </div>
         )
     }

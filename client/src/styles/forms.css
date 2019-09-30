@@ -52,18 +52,3 @@
     background: #1f1f1f;
     color: #494949 !important;
 }
-
-@media all and (max-width:30em){
-     .sm-form-button {
-      margin:0.4em auto;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .sm-form {
-        width: 80vw;
-    }
-     .sm-form-button {
-        font-size: 3px !important;
-    }
-}

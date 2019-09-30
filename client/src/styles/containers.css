@@ -9,6 +9,10 @@
     transform: translate(-50%);
 }
 
+.twy {
+    top: 20% !important;
+}
+
 .back-arrow-box {
     position: fixed;
     z-index: 10;
@@ -181,21 +185,35 @@
         clear: both;
     }
   
-    .card {
+    .city-card {
         margin: .2em !important;
         height: 150px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         padding: 16px;
         text-align: center;
-        color: black;
-        background-color: #ececec8e !important;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.644) !important;
+        border: 3px solid rgba(255, 255, 255, 0.062) !important;
+        border-radius: 6px;
+    }
+    .city-card:hover  {
+        margin: .2em !important;
+        height: 150px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        color: white;
+        background-color: rgba(53, 53, 53, 0.103) !important;
+        border: 3px solid rgba(255, 255, 255, 0.062) !important;
+        border-radius: 6px;
+        cursor: pointer;
     }
 
 
 /* Partner Container */
 
 .partner-container {
-    
+    overflow: scroll;
 }
 
 .partner-box {
@@ -204,23 +222,41 @@
     width: 90%;
     margin: auto !important;
     padding: 20px 0px !important;
-    background-color: rgba(0, 0, 0, 0.534);
+    background-color: rgba(0, 0, 0, 0.644);
     border: 3px solid rgba(255, 255, 255, 0.062);
     border-radius: 6px;
     text-align: center;
     color: white;
 }
 
+.partner-box .testing {
+    margin: 0 20px !important;
+    padding: 20px 0 !important;
+    /* background-color: rgba(0, 0, 0, 0.342);
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 6px; */
+}
+
 .partner-box .left {
+    float: left;
     width: 50%;
-    border-right: 1px  rgba(255, 255, 255, 0.322);
 }
 
 .partner-box .right {
-
+    display: inline-block;
+    width: 50% !important;
+    border-left: 2px solid rgba(255, 255, 255, 0.226);
+    
 }
 
-.partner-box .login-container {
+.partner-box .partner-info {
+    display: inline-block;
+    width: 100%;
+    padding: 2em !important;
+    margin: auto !important;
+}
+
+.partner-box .login-container, .partner-box .registration-container {
     width: 80%;
     margin: auto !important;
 }
@@ -229,7 +265,57 @@
     width: 50% !important;
     margin-top: 30px !important;
 }
-        
+
+.user-dash {
+    width: 80% !important;
+    margin: auto !important;
+}
+
+.user-dash .label {
+    display: inline-block;
+    width: 30% !important;
+    font-weight: bold;
+    margin: 10px 0 !important;
+}
+
+.user-dash #approved {
+    width: 50% !important;
+    font-weight: bold;
+    color: green;
+}
+
+.user-dash .key {
+    display: inline-block;
+    width: 50% !important;
+    color: rgb(107, 173, 248);
+    background-color: rgba(0, 0, 0, 0.644);
+    border: 3px solid rgba(255, 255, 255, 0.062);
+    border-radius: 6px;
+}
+
+.user-dash h4 {
+    margin-top: 30px !important;
+}
+
+.api-info {
+    width: 90%;
+    margin: 20px auto !important;
+}
+
+.api-info .endpoint {
+    list-style-type: none;
+    margin: 20px 10px !important;
+}
+
+.api-info .endpoint p {
+    display: inline-block;
+    width: 55px;
+    margin: 0 10px 0px 0 !important;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: #008BFA;
+}
+
   
 @media screen and (max-width: 660px) {
     .back-arrow-box {
@@ -281,10 +367,49 @@
 }
 
 @media screen and (max-width: 900px) {
+
+    .centered {
+        width: 100% !important;
+    }
+
     .column {
       width: 30%;
       display: block;
       margin-bottom: 20px;
+    }
+
+    .partner-box {
+        border: none;
+        background: none;
+    }
+
+    .partner-box .left {
+        display: block;
+        float: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.644);
+        border: 3px solid rgba(255, 255, 255, 0.062);
+        border-radius: 6px;
+        margin: 10px 0 !important;
+    }
+
+    .partner-box .right {
+        display: block;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.644);
+        border: 3px solid rgba(255, 255, 255, 0.062);
+        border-radius: 6px;
+        margin: 10px 0 !important;
+    }
+
+    .partner-box .login-container, .sm-form {
+        width: 90% !important;
+        margin: 20px auto !important;
+    }
+    
+    .partner-box #login-button {
+        width: 50% !important;
+        margin-top: 0px !important;
     }
 }
 /* 

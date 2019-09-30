@@ -7,7 +7,7 @@ const hrStyle = {
   };
 
 const CheckInCard = props => 
-    <div className="centered checkin-card">
+    <div className="centered twy checkin-card">
         <center>
             <h3>Thank you for checking in, {props.person.first_name}.</h3>
             <h3>We are relieved to hear you are safe. Checking in will help your loved ones find that same relief. </h3>

@@ -6,7 +6,7 @@ class PersonsController < ActionController::API
     before_action :authenticate, only: [:api_check_in]
 
     def token
-        request.headers['api-key']
+        request.headers['X-API-KEY']
     end
 
     def check_in

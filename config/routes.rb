@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   # API Routes
 
   post '/api/checkin' => 'persons#api_check_in'
+  get '/api/persons' => 'api#persons'
 end
 
