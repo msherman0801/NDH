@@ -26,8 +26,7 @@ class ApiController < ActionController::API
     end
 
     protected
-  
-    # Authenticate the user with token based authentication
+    
     def authenticate
         authenticate_token || render_unauthorized
     end

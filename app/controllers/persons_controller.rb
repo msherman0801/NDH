@@ -1,7 +1,7 @@
 require "json"
 require 'rest-client' 
 
-class PersonsController < ActionController::api
+class PersonsController < ActionController::API
     
     def check_in
         params['response'] = JSON.parse(RestClient::Request.execute(

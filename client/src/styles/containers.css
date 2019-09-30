@@ -24,6 +24,13 @@
     font-size: 15px;
 }
 
+
+/* Font Classes */
+
+.text-blue {color: rgb(71, 131, 209) !important; display: inline;}
+.text-green {color: rgb(66, 216, 183) !important; display: inline;}
+.text-red {color: rgb(221, 53, 11) !important; display: inline;}
+
 /* Logo */
 
 .top-centered-logo {
@@ -44,8 +51,19 @@
 .checkin-card {
     margin-top: 2em !important;
     padding: 2em !important;
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.335);
+    border: 3px solid rgba(255, 255, 255, 0.062);
+    border-radius: 6px;
     color: white;
+}
+
+.checkin-card .middle {
+    width: 50% !important;
+    margin: 20px auto !important;
+    padding: 20px !important;
+    background-color: rgba(0, 0, 0, 0.335);
+    border: 3px solid rgba(255, 255, 255, 0.062);
+    border-radius: 6px;
 }
 
 /* Person Container */
