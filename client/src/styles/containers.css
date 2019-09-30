@@ -418,6 +418,10 @@
         width: 100% !important;
     }
 
+    .checkin-card {
+        width: 80% !important;
+    }
+
     .column {
       width: 30%;
       display: block;
