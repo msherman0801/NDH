@@ -10,10 +10,10 @@ class PartnerInfo extends React.Component {
         return (
             <div className="right">
                 <div className="partner-info">
-                    <h3>What does it mean to become an NDH Partner?</h3>
+                    <h2>What does it mean to become an NDH Partner?</h2>
                     <br />
                     <p>It means you represent an organization or are an individual who wants to help
-                        unite victims or national natural and manmade disasters with their friends, families,
+                        unite victims of natural and manmade disasters with their friends, families,
                         and loved ones.
                         <br /><br />
                         Becoming an NDH Partner is free and gives you unlimited access to our public API. This access will allow
@@ -24,7 +24,7 @@ class PartnerInfo extends React.Component {
                         to ensure victim's are safe and out of the disaster area.
                     </p>
                     <ul className="api-info">
-                        <h3>API Endpoints</h3>
+                        <h2>API Endpoints</h2>
                         <li class="endpoint red"><p>POST</p><code>/api/checkin</code>
                         <br />
                         <code>curl -H 'X-Api-Key: YOUR_API_KEY' 'https://ndh.org/api/checkin'</code></li>

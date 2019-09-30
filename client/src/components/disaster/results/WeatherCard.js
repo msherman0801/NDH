@@ -19,7 +19,6 @@ const WeatherCard = props =>
                 <a style={{display:'block'}} href={props.data.MobileLink}>Get more information</a>
             </div>
         </div>
-        <hr style={{width: '25%'}}/>
     </li>
 
 export default WeatherCard

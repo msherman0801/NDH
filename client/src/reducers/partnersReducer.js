@@ -12,7 +12,7 @@ export default function partnersReducer(state = { user: null
             return { ...state, loading: true }
         case 'RECIEVED_LOGIN_RESPONSE':
             console.log('RECIEVED_lOGIN_RESPONSE', action.payload)
-            return { ...state, loading: false, user: action.payload }
+            return { ...state, loading: false, user: action.payload.user }
         default:
             return state;
     }

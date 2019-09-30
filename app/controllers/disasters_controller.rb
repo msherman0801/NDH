@@ -17,6 +17,7 @@ class DisastersController < ActionController::API
             method: "GET",
             url: "http://dataservice.accuweather.com/forecasts/v1/daily/5day/#{params['city_id']}?apikey=#{ENV['ACCUWEATHER_KEY']}"
         ))
+        
         render json: response
     end
 

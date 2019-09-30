@@ -19,7 +19,7 @@
     min-width: 250px;
     top: 10%;
     left: 20%;
-    right: 60%;
+    right: 50%;
     transform: translate(-50%, -50%);
     font-size: 15px;
 }
@@ -33,15 +33,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
-.home-link {
-    position: fixed;
-    z-index: 10;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
 .home-link:hover {
     color: white;
     text-decoration: none;
@@ -142,15 +133,29 @@
         height: 70%;
     }
 
+    .disaster-box li .top h3 {
+        font-size: 28px;
+    }
+
     .disaster-box li .bottom {
         height: 30%;
         /* border-radius: 0 0 10px 10px; */
     }
 
     .disaster-box li .content {
-        padding-top: 5% !important;
+        padding-top: 10% !important;
         text-align: left;
         color: white;
+    }
+
+    .disaster-box li p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .disaster-box li .content a {
+        color: white;
+        font-size: 14px !important;
     }
 
     .disaster-box li img {
@@ -171,13 +176,19 @@
         border: 3px solid rgba(255, 255, 255, 0.062);
         border-radius: 6px;
     }
+    
     .column {
         float: left;
         width: 25%;
         padding: 0 10px;
     }
   
-    .row {margin: auto}
+    .row {
+        display: block;
+        width: 100% !important;
+        margin: auto !important;
+        padding: auto !important;
+    }
 
     .row:after {
         content: "";
@@ -287,6 +298,7 @@
 .user-dash .key {
     display: inline-block;
     width: 50% !important;
+    padding: 0px 10px !important;
     color: rgb(107, 173, 248);
     background-color: rgba(0, 0, 0, 0.644);
     border: 3px solid rgba(255, 255, 255, 0.062);
@@ -310,9 +322,19 @@
 .api-info .endpoint p {
     display: inline-block;
     width: 55px;
+    height: 20px;
+    padding-top: 1px !important;
     margin: 0 10px 0px 0 !important;
     font-weight: bold;
     border-radius: 6px;
+}
+
+
+.red p {
+    background-color: rgb(192, 92, 92);
+}
+
+.blue p {
     background-color: #008BFA;
 }
 
@@ -322,7 +344,7 @@
         position: fixed;
         z-index: 10;
         top: 25%;
-        left: 50%;
+        left: 70%;
         transform: translate(-50%, -50%);
     }
 }
@@ -348,6 +370,7 @@
         margin: 1.5em auto !important;
         width: 400px;
         display:block;
+        
     }
 
     .disaster-box li .top { padding-top: 25% !important; }
@@ -356,6 +379,11 @@
         padding-top: 6% !important;
         text-align: left;
         color: white;
+    }
+
+    .disaster-box li .top {
+        font-size: 35px;
+        font-weight: bold;
     }
 
     .disaster-box li img { margin-top: 6% !important; }
@@ -410,6 +438,11 @@
     .partner-box #login-button {
         width: 50% !important;
         margin-top: 0px !important;
+    }
+
+    .city-card {
+        display: block !important;
+        width: 100% !important;
     }
 }
 /* 

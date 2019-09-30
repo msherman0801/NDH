@@ -55,10 +55,11 @@ class Disaster extends Component {
             <div style={background} onScroll={this.handleScroll} >
                 {this.state.logo}
                 <div className="back-arrow-box">
-                    <NavLink to="/" className="home-link"><img
+                    <NavLink to="/"><img 
+                        
                         width="30"
                         src="back-arrow.png" 
-                    /> Back Home </NavLink>
+                    /></NavLink>
                 </div>
 
                 <div className="disaster-container" style={overlay}>

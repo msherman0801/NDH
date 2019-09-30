@@ -46,10 +46,11 @@ class Partner extends Component {
                     alt="Nation Disaster Hub Logo"
                 />
                 <div className="back-arrow-box">
-                    <NavLink to="/" className="home-link"><img
+                    <NavLink to="/"><img 
+                        
                         width="30"
                         src="back-arrow.png" 
-                    /> Back Home </NavLink>
+                    /></NavLink>
                 </div>
                 <div style={overlay} className="partner-container">
                     <div className="partner-box">

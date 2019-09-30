@@ -10,13 +10,19 @@ class UserHandler extends React.Component {
     }
 
     renderModule() {
+        this.checkErrors(this.props.user)
+
         if (this.props.user) {
-            return <UserDash user={this.props.user.user} />
+            return <UserDash user={this.props.user} />
         } else if (this.state.currentUser) {
             return <LoginForm dispatch={this.props.loginDispatch} submit={this.changeModule} />
         } else {
             return <RegistrationForm dispatch={this.props.registrationDispatch} submit={this.changeModule} />
         }
+    }
+
+    checkErrors(user) {
+        debugger
     }
 
     changeModule = (value) => {

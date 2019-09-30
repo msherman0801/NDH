@@ -71,9 +71,8 @@
 	margin:auto !important;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 1.4em;
-	font-weight: 3px;
 	letter-spacing: 5px;
+	font-weight: normal;
 	padding: 6px 10px 4px 10px!important;
 	border: 1px solid white;
 }
@@ -97,6 +96,9 @@
 	.centered-logo {
 		top: 10%;
 		width: 40vh;
+	}
+	.main-grid li {
+		border: none !important;
 	}
 }
 
