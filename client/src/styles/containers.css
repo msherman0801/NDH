@@ -381,14 +381,10 @@
         border: 0.5px solid rgba(3,3,3,0.2);
     }
 
-    .disaster-box ul {
-    }
-
     .disaster-box li {
         margin: 1.5em auto !important;
         width: 400px;
         display:block;
-        
     }
 
     .disaster-box li .top { padding-top: 25% !important; }
@@ -419,7 +415,7 @@
     }
 
     .checkin-card {
-        width: 80% !important;
+        width: 90% !important;
     }
 
     .column {
